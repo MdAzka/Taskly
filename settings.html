@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taskly - Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/settings.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside>
+      <div class="sidebar">
+        <div class="logo"><a href="/">Taskly</a></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-regular fa-file-lines"></i> To Do List</a
+              >
+            </li>
+            <li>
+              <a href="quest.html"
+                ><i class="fa-solid fa-stopwatch"></i> Quest</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="calendar.html"
+                ><i class="fa-regular fa-calendar"></i> Calendar</a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="header-center"><span class="level">Level 7</span></div>
+      <div class="header-right">
+        <div class="daily-streak">
+          <span class="streak-label">Daily Streak</span>
+          <div class="streak-count-wrapper">
+            <span class="streak-count" id="streakCount">0</span>
+            <i class="fas fa-fire fire-icon"></i>
+          </div>
+        </div>
+        <div class="account-wrapper">
+          <div class="account" onclick="toggleDropdown()">
+            Suradilaga <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown" id="accountDropdown">
+            <a href="#">View Profile</a>
+            <a href="#">Switch User</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="settings-content">
+      <div class="settings-left">
+        <h2>Preferences</h2>
+        <div class="setting-item">
+          <label>Sound Effect</label>
+          <input type="checkbox" />
+        </div>
+        <div class="setting-item">
+          <label>Motivational Message</label>
+          <input type="checkbox" />
+        </div>
+        <div class="setting-item">
+          <label>Sync Data</label>
+          <input type="checkbox" />
+        </div>
+      </div>
+
+      <div class="settings-right">
+        <div class="settings-menu">
+          <h2>Settings</h2>
+          <a href="settings.html" class="setting-link active">Preferences</a>
+          <a href="settings-profile.html" class="setting-link">Profile</a>
+          <a href="settings-notification.html" class="setting-link"
+            >Notification</a
+          >
+        </div>
+        <hr />
+        <div class="support-section">
+          <h3>Support</h3>
+          <a href="#" class="help-link">Help Center</a>
+          <button class="logout-btn">Log Out</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="../script/settings.js"></script>
+  </body>
+</html>

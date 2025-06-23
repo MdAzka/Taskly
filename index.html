@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskly</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="../style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!--Aside-->
+    <aside>
+      <div class="sidebar">
+        <div class="logo">
+          <a href="/">Taskly</a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-regular fa-file-lines"></i> To Do List</a
+              >
+            </li>
+            <li>
+              <a href="quest.html"
+                ><i class="fa-solid fa-stopwatch"></i> Quest</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="calendar.html"
+                ><i class="fa-regular fa-calendar"></i> Calendar</a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!--Header-->
+    <header class="top-bar">
+      <div class="header-center">
+        <span class="level">Level 7</span>
+      </div>
+
+      <div class="header-right">
+        <!-- Daily Streak -->
+        <div class="daily-streak">
+          <span class="streak-label">Daily Streak</span>
+          <div class="streak-count-wrapper">
+            <span class="streak-count" id="streakCount">0</span>
+            <i class="fas fa-fire fire-icon"></i>
+          </div>
+        </div>
+
+        <!-- Account Dropdown -->
+        <div class="account-wrapper">
+          <div class="account" onclick="toggleDropdown()">
+            Suradilaga <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown" id="accountDropdown">
+            <a href="#">View Profile</a>
+            <a href="#">Switch User</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="main-layout">
+        <!-- Summary Cards -->
+        <section class="task-summary">
+          <div class="task-card due">
+            <p class="label">Due Today</p>
+            <p class="count">2</p>
+          </div>
+          <div class="task-card in-progress">
+            <p class="label">In Progress</p>
+            <p class="count">2</p>
+          </div>
+          <div class="task-card overdue">
+            <p class="label">Overdue</p>
+            <p class="count">0</p>
+          </div>
+        </section>
+        <!-- Main Content -->
+        <div class="content-body">
+          <div class="left-column">
+            <!-- My Tasks -->
+            <section class="my-tasks">
+              <h2>My Tasks</h2>
+              <form id="taskForm">
+                <input
+                  type="text"
+                  id="taskInput"
+                  placeholder="Add a new task"
+                  required
+                />
+                <button type="submit">Add</button>
+              </form>
+              <ul id="taskList"></ul>
+            </section>
+
+            <!-- Friend Activity -->
+            <section class="friend-activity-box">
+              <div class="friend-info">
+                <strong>Azka</strong> completed <strong>4 tasks</strong>
+              </div>
+              <div class="achievement">🎖️ Achievement unlocked!</div>
+            </section>
+          </div>
+
+          <!-- Quest Panel -->
+          <section class="quest-panel">
+            <div class="quest-box">
+              <h2>Daily Quest</h2>
+              <ul id="questList">
+                <!-- Checkbox Quest -->
+              </ul>
+            </div>
+
+            <div class="productivity-box">
+              <h3>Productivity - Last 30 Days</h3>
+              <div class="bars">
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 30%"></div>
+                <div class="bar" style="height: 90%"></div>
+                <div class="bar" style="height: 50%"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="../script/index.js"></script>
+  </body>
+</html>

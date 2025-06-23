@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taskly - Quest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/profile.css" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside>
+      <div class="sidebar">
+        <div class="logo">
+          <a href="/">Taskly</a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-regular fa-file-lines"></i> To Do List</a
+              >
+            </li>
+            <li>
+              <a href="quest.html"
+                ><i class="fa-solid fa-stopwatch"></i> Quest</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="calendar.html"
+                ><i class="fa-regular fa-calendar"></i> Calendar</a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="header-center">
+        <span class="level">Level 7</span>
+      </div>
+
+      <div class="header-right">
+        <!-- Daily Streak -->
+        <div class="daily-streak">
+          <span class="streak-label">Daily Streak</span>
+          <div class="streak-count-wrapper">
+            <span class="streak-count" id="streakCount">0</span>
+            <i class="fas fa-fire fire-icon"></i>
+          </div>
+        </div>
+
+        <!-- Account Dropdown -->
+        <div class="account-wrapper">
+          <div class="account" onclick="toggleDropdown()">
+            Suradilaga <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown" id="accountDropdown">
+            <a href="#">View Profile</a>
+            <a href="#">Switch User</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-content profile-page">
+      <div class="profile-left">
+        <div class="profile-info-row">
+          <div class="profile-photo-wrapper">
+            <img
+              src="../assets/profile.png"
+              alt="Photo Profile"
+              class="profile-photo-large"
+            />
+          </div>
+
+          <div class="profile-info-box">
+            <div class="profile-details-top">
+              <h2>Suradilaga</h2>
+              <p>Joined 24 November 1970</p>
+              <p><strong>12</strong> Followed</p>
+              <p><strong>590</strong> Followers</p>
+            </div>
+
+            <div class="profile-stats-box">
+              <div class="streak-icon">🔥</div>
+              <div class="streak-text">
+                <p class="streak-number">10</p>
+                <p class="streak-label">Day Streak</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-section">
+          <h3>Achievement</h3>
+          <ul class="achievement-list">
+            <li>🏆 Completed 10 Quests</li>
+            <li>🚀 Daily Streak 7 Days</li>
+            <li>⏰ Finished Quest on Time</li>
+            <li>📅 Consistent for a Week</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="profile-right">
+        <div class="followed-section">
+          <h3>Followed</h3>
+          <ul class="followed-list" id="followedList">
+            <!-- akan diisi JS -->
+          </ul>
+          <button
+            class="view-more-btn"
+            id="toggleFollowedBtn"
+            onclick="toggleFollowed()"
+          >
+            View More
+          </button>
+        </div>
+
+        <div class="add-friend-section">
+          <h3>Add Friend</h3>
+          <button class="btn add">🔍 Find Friend</button>
+          <button class="btn invite">➕ Invite Friends</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="../script/profile.js"></script>
+  </body>
+</html>

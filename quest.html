@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taskly - Quest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/quest.css" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside>
+      <div class="sidebar">
+        <div class="logo">
+          <a href="/">Taskly</a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-regular fa-file-lines"></i> To Do List</a
+              >
+            </li>
+            <li>
+              <a href="quest.html"
+                ><i class="fa-solid fa-stopwatch"></i> Quest</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="calendar.html"
+                ><i class="fa-regular fa-calendar"></i> Calendar</a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="header-center">
+        <span class="level">Level 7</span>
+      </div>
+
+      <div class="header-right">
+        <!-- Daily Streak -->
+        <div class="daily-streak">
+          <span class="streak-label">Daily Streak</span>
+          <div class="streak-count-wrapper">
+            <span class="streak-count" id="streakCount">0</span>
+            <i class="fas fa-fire fire-icon"></i>
+          </div>
+        </div>
+
+        <!-- Account Dropdown -->
+        <div class="account-wrapper">
+          <div class="account" onclick="toggleDropdown()">
+            Suradilaga <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown" id="accountDropdown">
+            <a href="#">View Profile</a>
+            <a href="#">Switch User</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="content-body">
+        <!-- KIRI -->
+        <div class="left-column">
+          <section class="quest-box">
+            <h2>Quest</h2>
+
+            <div class="quest-controls">
+              <div class="tabs">
+                <button class="tab active" onclick="filterQuests('all')">
+                  All
+                </button>
+                <button class="tab" onclick="filterQuests('today')">
+                  Today
+                </button>
+                <button class="tab" onclick="filterQuests('upcoming')">
+                  Upcoming
+                </button>
+                <button class="refresh-btn" onclick="resetQuestList()">
+                  <i class="fa-solid fa-rotate-right"></i>
+                </button>
+              </div>
+
+              <div class="search-add">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search quest..."
+                />
+                <button class="add-btn" onclick="toggleAddForm()">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+
+              <form id="questForm" style="display: none">
+                <input
+                  type="text"
+                  id="questInput"
+                  placeholder="New quest"
+                  required
+                />
+                <select id="questDate">
+                  <option value="today">Today</option>
+                  <option value="upcoming">Upcoming</option>
+                </select>
+                <select id="questUrgency">
+                  <option value="normal">Normal</option>
+                  <option value="urgent">Urgent</option>
+                </select>
+                <button type="submit">Add</button>
+              </form>
+            </div>
+
+            <ul id="questList"></ul>
+          </section>
+
+          <section class="reward-box">
+            <h3>🎉 Rewards</h3>
+            <p>
+              <strong
+                ><span id="completedCount">0</span> Quest Completed</strong
+              >
+            </p>
+          </section>
+        </div>
+
+        <!-- KANAN -->
+        <div class="right-column">
+          <section class="productivity-box">
+            <h3>Productivity</h3>
+            <div class="bars">
+              <div class="bar" style="height: 60%"></div>
+              <div class="bar" style="height: 80%"></div>
+              <div class="bar" style="height: 30%"></div>
+              <div class="bar" style="height: 90%"></div>
+              <div class="bar" style="height: 50%"></div>
+            </div>
+          </section>
+
+          <section class="calendar-box">
+            <h3>Calendar</h3>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="../script/quest.js"></script>
+  </body>
+</html>

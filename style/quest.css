@@ -1,0 +1,336 @@
+
+
+.main-content {
+  margin-left: 220px;
+  margin-top: 60px;
+  padding: 20px;
+  min-height: calc(100vh - 60px);
+  background-color: var(--color-bg);
+}
+
+.quest-section {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+}
+
+.quest-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 8px 16px;
+  background-color: var(--color-primary-light);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+#questForm {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#questForm input,
+#questForm select {
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+}
+
+#questForm button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#questList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quest-item {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quest-item .label {
+  font-weight: bold;
+}
+
+.quest-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.quest-content {
+  flex: 0 0 65%;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Productivity */
+.productivity-box {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bars {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  height: 100px;
+  background: var(--color-white);
+  padding: 10px 0;
+}
+
+.bar {
+  width: 10px;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+  transition: height 0.3s ease;
+}
+.bar:hover {
+  background-color: #2f6fa8;
+}
+
+/* Calendar */
+.calendar-box {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.calendar-placeholder {
+  font-size: 16px;
+  color: var(--color-subtext);
+}
+.calendar-placeholder i {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.content-body {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.left-column {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Box Style */
+.quest-box,
+.productivity-box,
+.calendar-box,
+.friend-activity-box {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Calendar Placeholder */
+.calendar-placeholder {
+  text-align: center;
+  color: var(--color-subtext);
+}
+.calendar-placeholder i {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.quest-box h2 {
+  margin-bottom: 10px;
+}
+
+.quest-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tab {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-primary-light);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.refresh-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.search-add {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-add input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.add-btn {
+  padding: 6px 10px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#questForm {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#questForm input,
+#questForm select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+#questForm button {
+  background-color: var(--color-success);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+}
+
+#questList {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.quest-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.quest-item.urgent {
+  border-left: 6px solid #e74c3c;
+}
+
+.reward-box {
+  margin-top: 20px;
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.calendar-day {
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: var(--color-primary);
+  color: white;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskly - Settings Profile</title>
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/settings-profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside>
+      <div class="sidebar">
+        <div class="logo"><a href="/">Taskly</a></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-regular fa-file-lines"></i> To Do List</a
+              >
+            </li>
+            <li>
+              <a href="quest.html"
+                ><i class="fa-solid fa-stopwatch"></i> Quest</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="calendar.html"
+                ><i class="fa-regular fa-calendar"></i> Calendar</a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Topbar -->
+    <header class="top-bar">
+      <div class="header-center"><span class="level">Level 7</span></div>
+      <div class="header-right">
+        <div class="daily-streak">
+          <span class="streak-label">Daily Streak</span>
+          <div class="streak-count-wrapper">
+            <span class="streak-count" id="streakCount">0</span>
+            <i class="fas fa-fire fire-icon"></i>
+          </div>
+        </div>
+        <div class="account-wrapper">
+          <div class="account" onclick="toggleDropdown()">
+            Suradilaga <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown" id="accountDropdown">
+            <a href="#">View Profile</a>
+            <a href="#">Switch User</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content settings-layout">
+      <section class="settings-left">
+        <h2>Profile</h2>
+        <div class="avatar-placeholder">👤</div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" value="Suradilaga" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" value="************" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" value="supanika999@gm" />
+        </div>
+      </section>
+
+      <section class="settings-right">
+        <div class="settings-menu">
+          <h3>Settings</h3>
+          <ul>
+            <li><a href="settings.html" class="link">Preferences</a></li>
+            <li>
+              <a href="settings-profile.html" class="link active">Profile</a>
+            </li>
+            <li>
+              <a href="settings-notification.html" class="link">Notification</a>
+            </li>
+          </ul>
+        </div>
+        <div class="settings-support">
+          <h3>Support</h3>
+          <a href="#" class="support-link">Help Center</a>
+          <button class="logout-btn">Log Out</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script/settings-profile.js"></script>
+  </body>
+</html>

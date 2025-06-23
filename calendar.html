@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskly - Calendar</title>
+  <link rel="stylesheet" href="../style/index.css" />
+  <link rel="stylesheet" href="../style/calendar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <div class="sidebar">
+      <div class="logo">
+        <a href="/">Taskly</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fa-regular fa-file-lines"></i> To Do List</a></li>
+          <li><a href="quest.html"><i class="fa-solid fa-stopwatch"></i> Quest</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+          <li><a href="calendar.html"><i class="fa-regular fa-calendar"></i> Calendar</a></li>
+          <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="header-center">
+      <span class="level">Level 7</span>
+    </div>
+    <div class="header-right">
+      <div class="daily-streak">
+        <span class="streak-label">Daily Streak</span>
+        <div class="streak-count-wrapper">
+          <span class="streak-count" id="streakCount">0</span>
+          <i class="fas fa-fire fire-icon"></i>
+        </div>
+      </div>
+      <div class="account-wrapper">
+        <div class="account" onclick="toggleDropdown()">Suradilaga <i class="fas fa-caret-down"></i></div>
+        <div class="dropdown" id="accountDropdown">
+          <a href="#">View Profile</a>
+          <a href="#">Switch User</a>
+          <a href="#">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Task Summary -->
+    <section class="task-summary">
+      <div class="task-card due">
+        <p class="label">Due Today</p>
+        <p class="count">2</p>
+      </div>
+      <div class="task-card in-progress">
+        <p class="label">In Progress</p>
+        <p class="count">2</p>
+      </div>
+      <div class="task-card overdue">
+        <p class="label">Overdue</p>
+        <p class="count">0</p>
+      </div>
+    </section>
+
+    <div class="calendar-section">
+      <!-- Kalender -->
+      <div class="calendar-box" id="calendarBox">
+        <div id="calendar"></div>
+      </div>
+
+      <!-- Kanan: Quest dan Productivity -->
+      <div class="side-column">
+        <div class="quest-box">
+          <h3>Quest</h3>
+          <ul id="questList" class="quest-list"></ul>
+        </div>
+        <div class="productivity-box">
+          <h3>Productivity</h3>
+          <div class="bars">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 50%"></div>
+            <div class="bar" style="height: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal tambah task -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Add Task for <span id="modalDate"></span></h3>
+      <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Task name" required />
+        <input type="time" id="taskTime" required />
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../script/calendar.js"></script>
+</body>
+</html>
